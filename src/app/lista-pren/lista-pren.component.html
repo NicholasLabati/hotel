@@ -1,0 +1,10 @@
+<button class="btn btn-primary" (click)="hideList()">Show</button>
+
+
+<ul *ngIf ="mostraLista">
+    <li  [ngClass]="pren.suspendedClass" *ngFor="let pren of listaPren">
+
+        {{pren.title}} : {{pren.stanza.title}}
+        <button (click)="makeSuspended(pren)">preferita</button>
+    </li>
+</ul>
